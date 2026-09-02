@@ -1,9 +1,0 @@
-*.pkl
-*.npz
-*.txt
-tsne_plots/
-plots/
-results/
-.ipynb_checkpoints/
-*.pdf
-*.png
