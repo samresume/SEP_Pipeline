@@ -20,7 +20,7 @@ The pipeline evaluated in this work has four stages, each isolated and measured 
 Each stage is evaluated across four classifiers: SVM, GRU, PatchTST, and InceptionTime.
 
 <p align="center">
-  <img src="figures/dataset_overview.png" width="500">
+  <img src="figures/dataset_overview.png" width="400">
 </p>
 
 ## Repository Structure
