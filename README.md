@@ -1,4 +1,4 @@
-*"Normalize, Clean, Resample: An End-to-End Pipeline Study for Solar Energetic Particle Forecasting"*
+## Normalize, Clean, Resample: An End-to-End Pipeline Study for Solar Energetic Particle Forecasting"
 
 ## Abstract
 
