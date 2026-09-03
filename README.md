@@ -7,7 +7,7 @@ Solar energetic particle (SEP) events are rare, high-impact space weather phenom
 ## Pipeline Overview
 
 <p align="center">
-  <img src="figures/pipeline.png" width="500">
+  <img src="figures/pipeline.png" width="1000">
 </p>
 
 The pipeline evaluated in this work has four stages, each isolated and measured independently before being combined:
