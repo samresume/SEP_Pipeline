@@ -1,7 +1,3 @@
-# SEP Pipeline
-
-Code and experiments for the paper:
-
 **"Normalize, Clean, Resample: An End-to-End Pipeline Study for Solar Energetic Particle Forecasting"**
 
 ## Abstract
