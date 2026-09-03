@@ -97,7 +97,7 @@ Preprocessing, not augmentation or architecture, accounts for most of the achiev
 Our best full-pipeline configuration, a single GRU using only Hybrid normalization and Tomek Links cleaning, reaches a test TSS of 0.671, exceeding five published SEP forecasters, including MEMPSEP-I at 0.630, despite evaluating at a harsher, more operationally realistic 104:1 test imbalance than any of those studies.
 
 <p align="center">
-  <img src="figures/pipeline_progression.png" width="500">
+  <img src="figures/pipeline_progression.png" width="650">
 </p>
 
 <p align="center">
