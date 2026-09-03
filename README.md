@@ -6,7 +6,9 @@ Solar energetic particle (SEP) events are rare, high-impact space weather phenom
 
 ## Pipeline Overview
 
-![Pipeline overview](figures/pipeline.png)
+<p align="center">
+  <img src="figures/pipeline.png" width="500">
+</p>
 
 The pipeline evaluated in this work has four stages, each isolated and measured independently before being combined:
 
@@ -17,7 +19,9 @@ The pipeline evaluated in this work has four stages, each isolated and measured 
 
 Each stage is evaluated across four classifiers: SVM, GRU, PatchTST, and InceptionTime.
 
-![Dataset overview](figures/dataset_overview.png)
+<p align="center">
+  <img src="figures/dataset_overview.png" width="500">
+</p>
 
 ## Repository Structure
 
@@ -86,12 +90,19 @@ Run the notebooks in numeric order — each stage's output is the input to the n
 
 Each notebook documents its own expected inputs/outputs in its first markdown cell.
 
-## Figures
+## Results
 
-| | |
-|---|---|
-| ![Dataset overview](figures/dataset_overview.png) | ![Pipeline schematic](figures/pipeline.png) |
-| ![Pipeline stage progression](figures/pipeline_progression.png) | ![Baseline comparison](figures/baseline_comparison.png) |
+Preprocessing, not augmentation or architecture, accounts for most of the achievable gain. Hybrid normalization and Tomek Links borderline cleaning together raise mean TSS from 0.118 (raw inputs) to 0.503, a larger jump than any subsequent stage produces. Random under sampling alone adds no consistent benefit once Tomek Links cleaning is applied, and actively hurts some classifiers as it becomes more aggressive. Among the four over-sampling methods, classical interpolation-based techniques (SMOTE, ADASYN) consistently and substantially outperform both generative approaches (TimeGAN, diffusion) at every configuration and for every classifier individually, a gap driven almost entirely by Recall rather than false-alarm control, and traceable in feature space: SMOTE and ADASYN's synthetic sequences are hard to distinguish from real ones, while TimeGAN and Diffusion, trained on only 118 real sequences, cover a narrower, offset slice of the true distribution.
+
+Our best full-pipeline configuration, a single GRU using only Hybrid normalization and Tomek Links cleaning, reaches a test TSS of 0.671, exceeding five published SEP forecasters, including MEMPSEP-I at 0.630, despite evaluating at a harsher, more operationally realistic 104:1 test imbalance than any of those studies.
+
+<p align="center">
+  <img src="figures/pipeline_progression.png" width="500">
+</p>
+
+<p align="center">
+  <img src="figures/baseline_comparison.png" width="500">
+</p>
 
 ## License
 
